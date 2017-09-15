@@ -22,10 +22,10 @@ public class Employee {
 	
 	public Employee(String name, int idNumber, String department, String position)
 	{
-		name = this.name;
-		idNumber = this.idNumber;
-		department = this.department;
-		position = this.position;
+		this.name = name;
+		this.idNumber = idNumber;
+		this.department = department;
+		this.position = position;
 		
 	}
 	
@@ -39,8 +39,8 @@ public class Employee {
 	
 	public Employee(String name, int idNumber)
 	{
-		name = this.name;
-		idNumber = this.idNumber;
+		this.name = name;
+		this.idNumber = idNumber;
 		department = "";
 		position = "";
 		
@@ -69,7 +69,7 @@ public class Employee {
 	
 	public void setName(String name)
 	{
-		name = this.name;
+		this.name = name;
 	}
 	
 	
@@ -80,7 +80,7 @@ public class Employee {
 	
 	public void setIdNumber(int idNumber)
 	{
-		idNumber = this.idNumber;
+		this.idNumber = idNumber;
 	}
 	
 	
@@ -91,7 +91,7 @@ public class Employee {
 	
 	public void setDepartment(String department)
 	{
-		department = this.department;
+		this.department = department;
 	}
 	
 	
@@ -102,7 +102,7 @@ public class Employee {
 	
 	public void setPosition(String position)
 	{
-		position = this.position;
+		this.position = position;
 	}
 	
 	
