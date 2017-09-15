@@ -7,32 +7,39 @@
 
 public class Employee {
 
-	private String name;		//employee name
-	private int idNumber;		//employee ID 
-	private String department;  //employees department he/she works in
-	private String position;    //employee position
+	private String name;	    	//employee name
+	private int idNumber;		    //employee ID 
+	private String department;  	//employees department he/she works in
+	private String position;    	//employee position
+	private double payRate;     	//employee pay rate
+	private double hoursPerWeek; 	//employee hours per week worked
+	private double grossPay;		//employee calculated gross pay
 	
 	/**
-	 * This constructor sets name, idNumber, department, and position.
+	 * This constructor sets name, idNumber, department, position, payRate, and hoursPerWeek.
 	 * @param name
 	 * @param idNumber
 	 * @param department
 	 * @param position
+	 * @param payRate
+	 * @param hoursPerWeek
 	 */
 	
-	public Employee(String name, int idNumber, String department, String position)
+	public Employee(String name, int idNumber, String department, String position, double payRate, double hoursPerWeek)
 	{
 		this.name = name;
 		this.idNumber = idNumber;
 		this.department = department;
 		this.position = position;
+		this.payRate = payRate;
+		this.hoursPerWeek = hoursPerWeek;
 		
 	}
 	
 	
 	/**
-	 * This constructor sets name and idNumber,
-	 * while setting department and position to "".
+	 * This constructor sets name and idNumber, while setting department and position to "", 
+	 * and payRate and hoursPerWeek to 0.0.
 	 * @param name
 	 * @param idNumber
 	 */
@@ -43,13 +50,15 @@ public class Employee {
 		this.idNumber = idNumber;
 		department = "";
 		position = "";
+		payRate = 0.0;
+		hoursPerWeek = 0.0;
 		
 	}
 	
 	
 	/**
 	 * This constructor takes no parameters and sets defaults for all employee values.
-	 * "" for Strings and 0 for int.
+	 * "" for Strings, 0 for int, and 0.0 for doubles.
 	 */
 	
 	public Employee()
@@ -58,6 +67,8 @@ public class Employee {
 		idNumber = 0;
 		department = "";
 		position = "";
+		payRate = 0.0;
+		hoursPerWeek = 0.0;
 		
 	}
 	
@@ -107,6 +118,28 @@ public class Employee {
 	
 	
 	/**
+	 * This method sets the employees pay rate from value given.
+	 * @param payRate
+	 */
+	
+	public void setPayRate(double payRate)
+	{
+		this.payRate = payRate;
+	}
+	
+	
+	/**
+	 * This method sets how many hours per week the employee works.
+	 * @param hoursPerWeek
+	 */
+	
+	public void setHoursPerWeek(double hoursPerWeek)
+	{
+		this.hoursPerWeek = hoursPerWeek;
+	}
+	
+	
+	/**
 	 * This method gets the name from a employee.
 	 * @return name of employee
 	 */
@@ -147,5 +180,40 @@ public class Employee {
 	public String getPosition()
 	{
 		return position;
+	}
+	
+	
+	/**
+	 * This method returns the employees pay rate.
+	 * @return employees pay rate
+	 */
+	
+	public double getPayRate()
+	{
+		return payRate;
+	}
+	
+	
+	/**
+	 * This method returns the employees hours worked for the week.
+	 * @return employees hours worked per week
+	 */
+	
+	public double getHoursPerWeek()
+	{
+		return hoursPerWeek;
+	}
+	
+	
+	/**
+	 * This method calculates the gross pay of an employee 
+	 * based off their pay rate and hours worked per week.
+	 * @return gross pay of employee
+	 */
+	
+	public double grossPay()
+	{
+		grossPay = payRate * hoursPerWeek;
+		return grossPay;
 	}
 }
