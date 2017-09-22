@@ -9,13 +9,13 @@
 
 public class ParkedCar 
 {
-	
+	//information for vehicle objects.
 	enum Make {FORD, LAMBO, TESLA}
-	private Make make;									//make of the car
-	private String model;								//model of the car
-	private String color;								//color of the car
-	private String licensePlate;						//license plate for the car
-	private int minutesParked;							//how long the car has been parked
+	private Make make;									
+	private String model;								
+	private String color;						
+	private String licensePlate;						
+	private int minutesParked;							
 	
 	
 	

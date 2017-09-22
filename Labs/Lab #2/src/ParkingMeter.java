@@ -8,8 +8,8 @@
 
 public class ParkingMeter 
 {
-	
-	private int minutesPurchased;		//the number of minutes purchased
+	//the number of minutes purchased
+	private int minutesPurchased;		
 	
 	
 	/**

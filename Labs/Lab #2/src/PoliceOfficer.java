@@ -9,9 +9,9 @@
 
 public class PoliceOfficer 
 {
-	
-	private String name;			//police officer's name
-	private String badgeNumber;		//police officer's badge number
+	//police officer's name and badge number.
+	private String name;			
+	private String badgeNumber;		
 
 
 	
