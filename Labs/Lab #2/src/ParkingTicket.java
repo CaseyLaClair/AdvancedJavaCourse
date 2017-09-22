@@ -85,7 +85,7 @@ public class ParkingTicket
 	 * @return cars make
 	 */
 	
-	public String getMake() 
+	public ParkedCar.Make getMake() 
 	{
 		return car.getMake();
 	}

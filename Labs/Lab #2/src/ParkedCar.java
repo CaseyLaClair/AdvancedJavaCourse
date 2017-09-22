@@ -10,11 +10,14 @@
 public class ParkedCar 
 {
 	
-	private String make;			//make of the car
-	private String model;			//model of the car
-	private String color;			//color of the car
-	private String licensePlate;	//license plate for the car
-	private int minutesParked;		//how long the car has been parked
+	enum Make {FORD, LAMBO, TESLA}
+	private Make make;									//make of the car
+	private String model;								//model of the car
+	private String color;								//color of the car
+	private String licensePlate;						//license plate for the car
+	private int minutesParked;							//how long the car has been parked
+	
+	
 	
 	
 	/**
@@ -26,7 +29,7 @@ public class ParkedCar
 	 * @param minutesParked -- minutes the car has been parked
 	 */
 	
-	public ParkedCar(String make, String model, String color, String licensePlate, int minutesParked)
+	public ParkedCar(Make make, String model, String color, String licensePlate, int minutesParked)
 	{
 		this.make = make;
 		this.model = model;
@@ -56,7 +59,7 @@ public class ParkedCar
 	 * @return make of the car
 	 */
 	
-	public String getMake() 
+	public Make getMake() 
 	{
 		return make;
 	}
