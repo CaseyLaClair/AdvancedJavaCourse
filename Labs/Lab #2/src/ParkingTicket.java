@@ -18,7 +18,7 @@ public class ParkingTicket
 		int timePurchased, timeParked, timeOver, hoursOver, minutesOver;
 		
 		//Calculate how long the car has been parked
-		timePurchased  = meter.getMinutesPurchased();
+		timePurchased = meter.getMinutesPurchased();
 		timeParked = car.getMinutesParked();
 		timeOver = timeParked - timePurchased;
 		
