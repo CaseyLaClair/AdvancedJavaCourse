@@ -2,7 +2,7 @@
 /**
  * This class creates and stores information regarding to
  * a police officer.
- * @author casey
+ * @author Casey LaClair
  *
  */
 
@@ -90,4 +90,33 @@ public class PoliceOfficer
 		
 		return ticket;
 	}
+	
+	/**
+	 * This method overrides the default toString method and displays 
+	 * the officers name and badge number.
+	 */
+	
+	public String toString()
+	{
+		String values = String.format("%s\nBadge Number: %s\n", name, badgeNumber);
+		return values;
+	}
+	
+	/**
+	 * This method overrides the equals method to compare
+	 * the officer objects name and badge numbers. 
+	 * @param officer object
+	 * @return true or false status of equality
+	 */
+	
+	public boolean equals(PoliceOfficer officer)
+	{
+		boolean status = false;
+		
+		if (this.name == officer.getName() && this.badgeNumber == officer.getBadgeNumber())
+			status = true;
+		
+		return status;
+	}
+	
 }

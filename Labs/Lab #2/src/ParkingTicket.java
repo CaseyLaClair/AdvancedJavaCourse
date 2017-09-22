@@ -7,9 +7,10 @@
 public class ParkingTicket 
 {
 
-	private ParkedCar car;			//the car getting a ticket
-	private PoliceOfficer officer;	//the officer giving the ticket
-	private double fine;			//the fine of the ticket
+	private ParkedCar car;				//the car getting a ticket
+	private PoliceOfficer officer;		//the officer giving the ticket
+	private double fine;				//the fine of the ticket
+	private static int numTickets = 0;  //how many tickets have been issued.
 	
 	
 	public ParkingTicket(ParkingMeter meter, ParkedCar car, PoliceOfficer officer)
@@ -42,6 +43,9 @@ public class ParkingTicket
 		
 		//set officer field:
 		this.officer = new PoliceOfficer(officer);
+		
+		//update the number of tickets issued.
+		updateNumTickets();
 	}
 	
 
@@ -104,6 +108,55 @@ public class ParkingTicket
 	public String getLicensePlate() 
 	{
 		return car.getLicensePlate();
+	}
+	
+	/**
+	 * This method updates the number of tickets issued.
+	 */
+	
+	public static void updateNumTickets()
+	{
+		numTickets++;
+	}
+	
+	/**
+	 * This method returns the number of tickets that have been issued.
+	 * @return number of tickets issued
+	 */
+	public int getNumTickets()
+	{
+		return numTickets;
+	}
+	
+	/**
+	 * This toString overrides the default and displays all information 
+	 * regarding a the car info, officer info, and fine for a parking ticket.
+	 */
+	public String toString()
+	{
+		String values = String.format("Car Information:\n%s\nOfficer: %s\nFine: %.2f\n", car.toString(), officer.toString(), fine);
+		return values;
+	}
+	
+	/**
+	 * This method overrides the equals method to compare 
+	 * the parking tickets car objects, officer objects, and
+	 * fines.
+	 * @param ticket object to compare
+	 * @return true or false status of equality
+	 */
+	
+	public boolean equals(ParkingTicket ticket)
+	{
+		boolean status = false;
+		
+		if (this.car.equals(ticket.car) && this.officer.equals(ticket.officer)
+				&& this.fine == ticket.getFine()) 
+		{
+			status = true;
+		}
+		
+		return status;
 	}
 	
 }

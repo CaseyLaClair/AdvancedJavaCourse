@@ -34,4 +34,32 @@ public class ParkingMeter
 		return minutesPurchased;
 	}
 	
+	/**
+	 * This method overrides the default toString() method and displays 
+	 * the minutes purchased for a car.
+	 */
+	
+	public String toString()
+	{
+		String values = String.format("Minutes Purchased: %d", minutesPurchased);
+		return values;
+	}
+	
+	/**
+	 * This method overrides the equals method to compare
+	 * minutes purchased between two ticket objects.
+	 * @param meter object
+	 * @return true or false status of equality
+	 */
+	
+	public boolean equals(ParkingMeter meter)
+	{
+		boolean status = false;
+		
+		if (this.minutesPurchased == meter.getMinutesPurchased())
+			status = true;
+		
+		
+		return status;
+	}
 }

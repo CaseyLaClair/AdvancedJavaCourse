@@ -101,6 +101,37 @@ public class ParkedCar
 		return minutesParked;
 	}
 	
-
+	/**
+	 * This method overrides the toString method and displays the car's 
+	 * make, model, color, license plate, and minutes parked.
+	 */
+	
+	public String toString()
+	{
+		String values = String.format("Make: %s\nModel: %s\nColor: %s\nPlate#: %s\nMinutes Parked: %d\n", make, model, color, licensePlate, minutesParked);
+		return values;
+	}
+	
+	/**
+	 * This method overrides the equals method to compare
+	 * two car objects make, model, color, license plate,
+	 * and minutes parked.
+	 * @param car object
+	 * @return true or false status of equality
+	 */
+	
+	public boolean equals(ParkedCar car)
+	{
+		boolean status = false;
+		
+		if (this.make == car.getMake() && this.model == car.getModel() &&
+				this.color == car.getColor() && this.licensePlate == car.getLicensePlate() &&
+				this.minutesParked == car.getMinutesParked())
+		{
+			status = true;
+		}
+		
+		return status;
+	}
 
 }

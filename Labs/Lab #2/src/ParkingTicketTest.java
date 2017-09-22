@@ -20,6 +20,9 @@ public class ParkingTicketTest
 		{
 			ParkingTicket ticket = officer.issueTicket(meter, car);
 			System.out.println(ticket.getFine());
+			System.out.println(ticket.getNumTickets() + "\n");
+			System.out.println(ticket.toString());
+			
 		}
 
 	}
