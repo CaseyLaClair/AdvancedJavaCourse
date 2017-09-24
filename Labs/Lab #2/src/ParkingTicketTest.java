@@ -108,7 +108,7 @@ public class ParkingTicketTest
 			
 		//Check if user enter Y for yes, else end.	
 		}while(yesOrNo.equalsIgnoreCase("Y"));
-
+		
 		//Close scanner.
 		kb.close();
 	}
