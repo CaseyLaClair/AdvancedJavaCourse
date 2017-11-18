@@ -1,0 +1,10 @@
+4612	CMP	Computer Science	Java I	CMP110	A-	010
+4612	CMP	Computer Science	Java I	CMP110	B	010
+4612	CMP	Computer Science	Java I	CMP110	A-	010
+4612	CMP	Computer Science	Java I	CMP110	A-	010
+4612	CMP	Computer Science	Java I	CMP110	A	010
+4612	CMP	Computer Science	Java I	CMP110	D	010
+4612	CMP	Computer Science	Java I	CMP110	B+	010
+4612	CMP	Computer Science	Java I	CMP110	B	010
+4612	CMP	Computer Science	Java I	CMP110	A	010
+4612	CMP	Computer Science	Java I	CMP110	A-	010
